@@ -1,0 +1,87 @@
+server:
+  port: 4000
+
+#Redis cache 过期时间设置
+redis:
+  cache:
+    expiration: 3600
+
+# sleuth配置
+spring:
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      percentage: 0.2
+
+# 分库分表支持
+sharding:
+  jdbc:
+    defaultDataSourceName:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: password
+      jdbc-url: jdbc:mysql://192.168.163.13:3306/judo?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    datasource:
+      names: ds
+      ds:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: password
+        jdbc-url: jdbc:mysql://192.168.163.13:3306/judo?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    config:
+      sharding:
+        tables:
+          sys_log:
+            actual-data-nodes: ds.sys_log_${0..1}
+            table-strategy:
+              inline:
+                sharding-column: id
+                algorithm-expression: sys_log_${id % 2}
+            key-generator-column-name: id
+
+#mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.github.judo.admin.model.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #序列接口实现类配置
+    #key-generator: com.baomidou.springboot.xxx
+    #逻辑删除配置（下面3个配置）
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    #自定义填充策略接口实现
+    meta-object-handler: com.github.judo.common.bean.handler.CommonFieldMetaObjectHandler
+    #自定义SQL注入器
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #如果数据为空的字段，则该字段省略不显示，可以通过添加配置文件，规定查询数据为空是则返回null。
+    call-setters-on-nulls: true
+
+#配置日志
+logging:
+  #配置日志文件路径
+  level:
+    com.github.judo.admin: debug #不同目录下的日志可配置不同级别
+
+# 七牛OSS 配置
+# qiniu:
+#  accessKey: hM2cBDEM0FTYzpXbigRW90kV12NhhzhFM3jCzurJ
+#  secretKey: ENC(HM/K0KmtFoZSBhGDEA0Ez71ePTncZlQ954DfLNMZuOftKZq+2WR+dCXH9QEsf768q9wwd92RXLE=)
+#  bucket: judo
+#  qiniuHost: http://p0hpm86wj.bkt.clouddn.com/

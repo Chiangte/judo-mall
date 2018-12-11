@@ -1,0 +1,7 @@
+FROM java:8-jre
+MAINTAINER judo xiangjunzhong <xiangjunzhong@qq.com>
+
+ADD ./jar/judo-eureka.jar /app/
+CMD ["java", "-Xmx200m", "-jar", "/app/judo-eureka.jar"]
+
+EXPOSE 1025

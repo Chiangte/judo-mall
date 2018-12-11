@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-admin-service/judo-admin-service.iml" filepath="$PROJECT_DIR$/judo-modules/judo-admin-service/judo-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-auth/judo-auth.iml" filepath="$PROJECT_DIR$/judo-auth/judo-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-common/judo-common.iml" filepath="$PROJECT_DIR$/judo-common/judo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-config/judo-config.iml" filepath="$PROJECT_DIR$/judo-config/judo-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-daemon-service/judo-daemon-service.iml" filepath="$PROJECT_DIR$/judo-modules/judo-daemon-service/judo-daemon-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-eureka/judo-eureka.iml" filepath="$PROJECT_DIR$/judo-eureka/judo-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-fastdfs-service/judo-fastdfs-service.iml" filepath="$PROJECT_DIR$/judo-modules/judo-fastdfs-service/judo-fastdfs-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-gateway/judo-gateway.iml" filepath="$PROJECT_DIR$/judo-gateway/judo-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-generator-service/judo-generator-service.iml" filepath="$PROJECT_DIR$/judo-modules/judo-generator-service/judo-generator-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-mc-service/judo-mc-service.iml" filepath="$PROJECT_DIR$/judo-modules/judo-mc-service/judo-mc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-modules.iml" filepath="$PROJECT_DIR$/judo-modules/judo-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-visual/judo-monitor/judo-monitor.iml" filepath="$PROJECT_DIR$/judo-visual/judo-monitor/judo-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-platform.iml" filepath="$PROJECT_DIR$/judo-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-modules/judo-sso-client-demo/judo-sso-client-demo.iml" filepath="$PROJECT_DIR$/judo-modules/judo-sso-client-demo/judo-sso-client-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-visual/judo-visual.iml" filepath="$PROJECT_DIR$/judo-visual/judo-visual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-visual/judo-zipkin-db/judo-zipkin-db.iml" filepath="$PROJECT_DIR$/judo-visual/judo-zipkin-db/judo-zipkin-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/judo-visual/judo-zipkin-elk/judo-zipkin-elk.iml" filepath="$PROJECT_DIR$/judo-visual/judo-zipkin-elk/judo-zipkin-elk.iml" />
+    </modules>
+  </component>
+</project>

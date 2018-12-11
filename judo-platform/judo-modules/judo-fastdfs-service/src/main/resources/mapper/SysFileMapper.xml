@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.judo.fastdfs.mapper.SysFileMapper">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.judo.fastdfs.model.entity.SysFile" id="sysFileMap">
+        <result property="id" column="id"/>
+        <result property="name" column="NAME"/>
+        <result property="suffix" column="suffix"/>
+        <result property="fileType" column="file_type"/>
+        <result property="size" column="size"/>
+        <result property="filePath" column="file_path"/>
+        <result property="serviceId" column="service_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="creater" column="creater"/>
+        <result property="lastModify" column="last_modify"/>
+        <result property="delFlag" column="del_flag"/>
+    </resultMap>
+</mapper>

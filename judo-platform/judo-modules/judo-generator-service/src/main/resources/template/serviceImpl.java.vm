@@ -1,0 +1,24 @@
+package ${package}.service.impl;
+
+import ${package}.model.entity.${className};
+import ${package}.mapper.${className}Mapper;
+import ${package}.service.${className}Service;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * @Auther: ${author}
+ * @Description: ${comments} 服务实现类
+ * @Date ${datetime}
+ * @Version: 1.0
+ */
+@Service
+@Transactional(readOnly = true, rollbackFor = Exception.class)
+public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}> implements ${className}Service {
+
+    @Autowired
+    private ${className}Mapper ${classname}Mapper;
+
+}

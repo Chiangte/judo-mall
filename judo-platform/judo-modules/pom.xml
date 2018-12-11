@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>judo-platform</artifactId>
+        <groupId>com.github.judo</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.judo</groupId>
+    <artifactId>judo-modules</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>judo-modules</name>
+    <description>judo-modules</description>
+
+    <modules>
+        <module>judo-admin-service</module>
+        <module>judo-daemon-service</module>
+        <module>judo-fastdfs-service</module>
+        <module>judo-generator-service</module>
+        <module>judo-mc-service</module>
+        <module>judo-sso-client-demo</module>
+    </modules>
+</project>

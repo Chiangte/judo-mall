@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="judo-admin-service" />
+        <module name="judo-auth" />
+        <module name="judo-common" />
+        <module name="judo-config" />
+        <module name="judo-daemon-service" />
+        <module name="judo-eureka" />
+        <module name="judo-fastdfs-service" />
+        <module name="judo-gateway" />
+        <module name="judo-generator" />
+        <module name="judo-generator-service" />
+        <module name="judo-mc-service" />
+        <module name="judo-monitor" />
+        <module name="judo-sso-client-demo" />
+        <module name="judo-zipkin-db" />
+        <module name="judo-zipkin-elk" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="judo-admin-service" target="1.8" />
+      <module name="judo-auth" target="1.8" />
+      <module name="judo-common" target="1.8" />
+      <module name="judo-config" target="1.8" />
+      <module name="judo-daemon-service" target="1.8" />
+      <module name="judo-eureka" target="1.8" />
+      <module name="judo-fastdfs-service" target="1.8" />
+      <module name="judo-gateway" target="1.8" />
+      <module name="judo-generator" target="1.8" />
+      <module name="judo-generator-service" target="1.8" />
+      <module name="judo-mc-service" target="1.8" />
+      <module name="judo-modules" target="1.8" />
+      <module name="judo-monitor" target="1.8" />
+      <module name="judo-platform" target="1.8" />
+      <module name="judo-sso-client-demo" target="1.8" />
+      <module name="judo-visual" target="1.8" />
+      <module name="judo-zipkin-db" target="1.8" />
+      <module name="judo-zipkin-elk" target="1.8" />
+      <module name="pig-modules" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

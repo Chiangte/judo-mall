@@ -1,0 +1,48 @@
+com.github.judo 项目根目录
+judo-platform     平台管理系统
+judo-platform-ui 平台管理系统
+judo-mall            商城系统
+judo-mall-ui        商城系统
+
+
+/**
+ * 
+ * @Auther: ${USER}
+ * @Date: ${DATE} ${HOUR}:${MINUTE}
+ * @Description: 类描述
+ * @Version:    1.0
+ */
+ 
+
+交易记录表
+
+评论表
+快递表
+收货地址表
+
+支付方式表
+
+优惠卷表(*)
+发票信息表(*)
+
+
+订单表
+收藏表
+
+MySQL Redis RabbitMQ ElasticSearch FastDFS
+
+nginx -c /etc/nginx/nginx.conf
+
+cd /var/run/
+mkdir nginx
+
+/etc/init.d/fdfs_trackerd start
+/etc/init.d/fdfs_storaged start
+/etc/init.d/nginx
+
+/usr/bin/fdfs_upload_file /etc/fdfs/client.conf xjpic.jpg
+
+http://192.168.163.13:8888/group1/M01/00/00/wKijDVvQZGWATTAtAAAiCmgwgCI477.jpg
+
+
+judo-platform基于Spring Cloud、OAuth2.0、Vue、element-vue-admin的前后端分离的系统。通用RBAC权限设计及其数据权限和分库分表、支持服务限流、动态路由、灰度发布、支持常见登录方式，多系统SSO登录。

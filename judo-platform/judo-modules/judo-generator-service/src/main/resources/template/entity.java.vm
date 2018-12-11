@@ -1,0 +1,57 @@
+package ${package}.model.entity;
+
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+import com.github.judo.common.entity.BaseEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.ToString;
+import org.springframework.data.annotation.Id;
+#if(${hasBigDecimal})
+import java.math.BigDecimal;
+#end
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * @Auther: ${author}
+ * @Description: ${comments}
+ * @Date ${datetime}
+ * @Version: 1.0
+ */
+@Data
+@ToString
+@TableName("${tableName}")
+@ApiModel("${comments}")
+public class ${className} extends BaseEntity<${className}> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+#foreach ($column in $columns)
+	#if($column.columnName == $pk.columnName)
+    /**
+     * $column.comments 主键 自增长
+     */
+    @Id
+    @TableId(value = "$column.columnName", type = IdType.UUID)
+    @ApiModelProperty(value = "$column.comments")
+    private $column.attrType $column.attrname;
+	#else
+    /**
+     * $column.comments
+     */
+    @TableField(value = "$column.columnName")
+    @ApiModelProperty(value = "$column.comments", required = true)
+    private $column.attrType $column.attrname;
+	#end
+#end
+
+    @Override
+    protected Serializable pkVal() {
+        return this.id;
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-admin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-daemon-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-fastdfs-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-generator-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-mc-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-modules/judo-sso-client-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-visual" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-visual/judo-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-visual/judo-zipkin-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/judo-visual/judo-zipkin-elk" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

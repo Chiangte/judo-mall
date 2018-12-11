@@ -1,0 +1,254 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for tb_address 用户地址表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_address`;
+CREATE TABLE `tb_address` (
+  `address_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `tel` varchar(255) DEFAULT NULL,
+  `street_name` varchar(255) DEFAULT NULL,
+  `is_default` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`address_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- ----------------------------
+-- Records of tb_address
+-- ----------------------------
+INSERT INTO `tb_address` VALUES ('3', '63', 'test', '18782059038', '四川省成都市青羊区百花中心站对面', '1');
+INSERT INTO `tb_address` VALUES ('5', '63', 'admin', '18782059038', '上海青浦区汇联路', '0');
+INSERT INTO `tb_address` VALUES ('6', '62', '1', '1', '1', '0');
+
+-- ----------------------------
+-- Table structure for tb_express 快递表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_express`;
+CREATE TABLE `tb_express` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '快递ID',
+  `express_name` varchar(255) DEFAULT NULL COMMENT '商品描述',
+  `sort_order` int(11) DEFAULT NULL COMMENT '排序',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='商品描述表';
+
+-- ----------------------------
+-- Records of tb_express
+-- ----------------------------
+INSERT INTO `tb_express` VALUES ('1', '京东快递', '1', '2018-05-31 11:45:10', null);
+
+-- ----------------------------
+-- Table structure for tb_item 商品表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_item`;
+CREATE TABLE `tb_item` (
+  `id` bigint(20) NOT NULL COMMENT '商品id，同时也是商品编号',
+  `title` varchar(100) DEFAULT NULL COMMENT '商品标题',
+  `sell_point` varchar(100) DEFAULT NULL COMMENT '商品卖点',
+  `price` decimal(10,2) DEFAULT '0.00' COMMENT '商品价格',
+  `num` int(11) DEFAULT NULL COMMENT '库存数量',
+  `limit_num` int(11) DEFAULT NULL COMMENT '售卖数量限制',
+  `image` varchar(2000) DEFAULT NULL COMMENT '商品图片',
+  `cid` bigint(11) DEFAULT NULL COMMENT '所属分类',
+  `status` int(1) DEFAULT '1' COMMENT '商品状态 1正常 0下架',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `cid` (`cid`),
+  KEY `status` (`status`),
+  KEY `updated` (`updated`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品表';
+
+-- ----------------------------
+-- Table structure for tb_item_desc 商品描述表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_item_desc`;
+CREATE TABLE `tb_item_desc` (
+  `item_id` bigint(20) NOT NULL COMMENT '商品ID',
+  `item_desc` text COMMENT '商品描述',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品描述表';
+
+-- ----------------------------
+-- Table structure for tb_item_cat 商品类目表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_item_cat`;
+CREATE TABLE `tb_item_cat` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '类目ID',
+  `parent_id` bigint(20) DEFAULT NULL COMMENT '父分类ID=0时代表一级根分类',
+  `name` varchar(50) DEFAULT NULL COMMENT '分类名称',
+  `status` int(1) DEFAULT '1' COMMENT '状态 1启用 0禁用',
+  `sort_order` int(4) DEFAULT NULL COMMENT '排列序号',
+  `is_parent` tinyint(1) DEFAULT '1' COMMENT '是否为父分类 1为true 0为false',
+  `icon` varchar(255) DEFAULT NULL COMMENT '图标',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `parent_id` (`parent_id`,`status`) USING BTREE,
+  KEY `sort_order` (`sort_order`)
+) ENGINE=InnoDB AUTO_INCREMENT=1185 DEFAULT CHARSET=utf8 COMMENT='商品类目';
+
+-- ----------------------------
+-- Table structure for tb_member 用户表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_member`;
+CREATE TABLE `tb_member` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL COMMENT '用户名',
+  `password` varchar(32) NOT NULL COMMENT '密码，加密存储',
+  `phone` varchar(20) DEFAULT NULL COMMENT '注册手机号',
+  `email` varchar(50) DEFAULT NULL COMMENT '注册邮箱',
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  `sex` varchar(2) DEFAULT '',
+  `address` varchar(255) DEFAULT NULL,
+  `state` int(1) DEFAULT '0',
+  `file` varchar(255) DEFAULT NULL COMMENT '头像',
+  `description` varchar(500) DEFAULT NULL,
+  `points` int(11) DEFAULT '0' COMMENT '积分',
+  `balance` decimal(10,2) DEFAULT '0.00' COMMENT '余额',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`) USING BTREE,
+  UNIQUE KEY `phone` (`phone`) USING BTREE,
+  UNIQUE KEY `email` (`email`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+-- ----------------------------
+-- Table structure for tb_order 订单表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_order`;
+CREATE TABLE `tb_order` (
+  `order_id` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '订单id',
+  `payment` decimal(10,2) DEFAULT NULL COMMENT '实付金额',
+  `payment_type` int(1) DEFAULT NULL COMMENT '支付类型 1在线支付 2货到付款',
+  `post_fee` decimal(10,2) DEFAULT NULL COMMENT '邮费',
+  `status` int(1) DEFAULT NULL COMMENT '状态 0未付款 1已付款 2未发货 3已发货 4交易成功 5交易关闭 6交易失败',
+  `create_time` datetime DEFAULT NULL COMMENT '订单创建时间',
+  `update_time` datetime DEFAULT NULL COMMENT '订单更新时间',
+  `payment_time` datetime DEFAULT NULL COMMENT '付款时间',
+  `consign_time` datetime DEFAULT NULL COMMENT '发货时间',
+  `end_time` datetime DEFAULT NULL COMMENT '交易完成时间',
+  `close_time` datetime DEFAULT NULL COMMENT '交易关闭时间',
+  `shipping_name` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT '物流名称',
+  `shipping_code` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT '物流单号',
+  `user_id` bigint(20) DEFAULT NULL COMMENT '用户id',
+  `buyer_message` varchar(100) COLLATE utf8_bin DEFAULT NULL COMMENT '买家留言',
+  `buyer_nick` varchar(50) COLLATE utf8_bin DEFAULT NULL COMMENT '买家昵称',
+  `buyer_comment` tinyint(1) DEFAULT NULL COMMENT '买家是否已经评价',
+  PRIMARY KEY (`order_id`),
+  KEY `create_time` (`create_time`),
+  KEY `buyer_nick` (`buyer_nick`),
+  KEY `status` (`status`),
+  KEY `payment_type` (`payment_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Table structure for tb_order_item 订单明细表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_order_item`;
+CREATE TABLE `tb_order_item` (
+  `id` varchar(20) COLLATE utf8_bin NOT NULL,
+  `item_id` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '商品id',
+  `order_id` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '订单id',
+  `num` int(10) DEFAULT NULL COMMENT '商品购买数量',
+  `title` varchar(200) COLLATE utf8_bin DEFAULT NULL COMMENT '商品标题',
+  `price` decimal(10,2) DEFAULT NULL COMMENT '商品单价',
+  `total_fee` decimal(10,2) DEFAULT NULL COMMENT '商品总金额',
+  `pic_path` varchar(1000) COLLATE utf8_bin DEFAULT NULL COMMENT '商品图片地址',
+  PRIMARY KEY (`id`),
+  KEY `item_id` (`item_id`),
+  KEY `order_id` (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+-- ----------------------------
+-- Table structure for tb_order_shipping
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_order_shipping`;
+CREATE TABLE `tb_order_shipping` (
+  `order_id` varchar(50) NOT NULL COMMENT '订单ID',
+  `receiver_name` varchar(20) DEFAULT NULL COMMENT '收货人全名',
+  `receiver_phone` varchar(20) DEFAULT NULL COMMENT '固定电话',
+  `receiver_mobile` varchar(30) DEFAULT NULL COMMENT '移动电话',
+  `receiver_state` varchar(10) DEFAULT NULL COMMENT '省份',
+  `receiver_city` varchar(10) DEFAULT NULL COMMENT '城市',
+  `receiver_district` varchar(20) DEFAULT NULL COMMENT '区/县',
+  `receiver_address` varchar(200) DEFAULT NULL COMMENT '收货地址，如：xx路xx号',
+  `receiver_zip` varchar(6) DEFAULT NULL COMMENT '邮政编码,如：310001',
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- ----------------------------
+-- Table structure for tb_panel
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_panel`;
+CREATE TABLE `tb_panel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '类目ID',
+  `name` varchar(50) DEFAULT NULL COMMENT '板块名称',
+  `type` int(1) DEFAULT NULL COMMENT '类型 0轮播图 1板块种类一 2板块种类二 3板块种类三 ',
+  `sort_order` int(4) DEFAULT NULL COMMENT '排列序号',
+  `position` int(1) DEFAULT NULL COMMENT '所属位置 0首页 1商品推荐 2我要捐赠',
+  `limit_num` int(4) DEFAULT NULL COMMENT '板块限制商品数量',
+  `status` int(1) DEFAULT '1' COMMENT '状态',
+  `remark` varchar(255) DEFAULT NULL COMMENT '备注',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `parent_id` (`status`) USING BTREE,
+  KEY `sort_order` (`sort_order`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='内容分类';
+
+-- ----------------------------
+-- Table structure for tb_user
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_user`;
+CREATE TABLE `tb_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL COMMENT '用户名',
+  `password` varchar(32) NOT NULL COMMENT '密码 md5加密存储',
+  `phone` varchar(20) DEFAULT NULL COMMENT '注册手机号',
+  `email` varchar(50) DEFAULT NULL COMMENT '注册邮箱',
+  `sex` varchar(2) DEFAULT '',
+  `address` varchar(255) DEFAULT NULL,
+  `state` int(11) DEFAULT '0',
+  `description` varchar(255) DEFAULT NULL,
+  `role_id` int(11) DEFAULT '0',
+  `file` varchar(255) DEFAULT NULL COMMENT '头像',
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`) USING BTREE,
+  UNIQUE KEY `phone` (`phone`) USING BTREE,
+  UNIQUE KEY `email` (`email`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+-- ----------------------------
+-- Table structure for tb_base 系统基础配置表
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_base`;
+CREATE TABLE `tb_base` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `web_name` varchar(255) DEFAULT NULL,
+  `key_word` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `source_path` varchar(255) DEFAULT NULL,
+  `upload_path` varchar(255) DEFAULT NULL,
+  `copyright` varchar(1000) DEFAULT NULL,
+  `count_code` varchar(1000) DEFAULT NULL,
+  `has_log_notice` int(11) DEFAULT NULL,
+  `log_notice` varchar(1000) DEFAULT NULL,
+  `has_all_notice` int(11) DEFAULT NULL,
+  `all_notice` varchar(1000) DEFAULT NULL,
+  `notice` varchar(8000) DEFAULT NULL,
+  `update_log` varchar(8000) DEFAULT NULL,
+  `front_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;

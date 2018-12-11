@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>judo-platform</artifactId>
+        <groupId>com.github.judo</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.judo</groupId>
+    <artifactId>judo-visual</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>judo-visual</name>
+    <description>图形化管理模块</description>
+
+    <modules>
+        <module>judo-monitor</module>
+        <module>judo-zipkin-elk</module>
+        <module>judo-zipkin-db</module>
+    </modules>
+</project>

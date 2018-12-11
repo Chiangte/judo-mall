@@ -1,0 +1,8 @@
+FROM java:8-jre
+MAINTAINER judo xiangjunzhong <xiangjunzhong@qq.com>
+
+ADD ./jar/judo-admin-service.jar /app/
+ADD ./jar/pinpoint-agent /app/pinpoint-agent
+
+CMD ["java", "-Xmx1000m", "-javaagent:/app/pinpoint-agent/pinpoint-bootstrap-1.5.0.jar", "-Dpinpoint.agentId=judo-admin-service", "-Dpinpoint.applicationName=judo-admin-SERVICE", "-jar", "/app/judo-admin-service.jar"]
+

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="952a8629-7bea-4dea-91f8-457f82200064" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/judo-auth/judo-auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-auth/judo-auth.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-common/judo-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-common/judo-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-config/judo-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-config/judo-config.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-eureka/judo-eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-eureka/judo-eureka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-gateway/judo-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-gateway/judo-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-admin-service/judo-admin-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-admin-service/judo-admin-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-daemon-service/judo-daemon-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-daemon-service/judo-daemon-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-fastdfs-service/judo-fastdfs-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-fastdfs-service/judo-fastdfs-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-generator-service/judo-generator-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-generator-service/judo-generator-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-mc-service/judo-mc-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-mc-service/judo-mc-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-modules/judo-sso-client-demo/judo-sso-client-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-modules/judo-sso-client-demo/judo-sso-client-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-visual/judo-monitor/judo-monitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-visual/judo-monitor/judo-monitor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-visual/judo-zipkin-db/judo-zipkin-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-visual/judo-zipkin-db/judo-zipkin-db.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/judo-visual/judo-zipkin-elk/judo-zipkin-elk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/judo-visual/judo-zipkin-elk/judo-zipkin-elk.iml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/judo-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/judo-config/target/" />
+    <ignored path="$PROJECT_DIR$/judo-common/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-fastdfs-service/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-admin-service/target/" />
+    <ignored path="$PROJECT_DIR$/judo-auth/target/" />
+    <ignored path="$PROJECT_DIR$/judo-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-daemon-service/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/target/" />
+    <ignored path="$PROJECT_DIR$/judo-visual/judo-monitor/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-generator-service/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-mc-service/target/" />
+    <ignored path="$PROJECT_DIR$/judo-modules/judo-sso-client-demo/target/" />
+    <ignored path="$PROJECT_DIR$/judo-visual/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/judo-visual/judo-zipkin-db/target/" />
+    <ignored path="$PROJECT_DIR$/judo-visual/judo-zipkin-elk/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2008223468">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Application/Apache/apache-maven-3.6.0-bin" />
+        <option name="userSettingsFile" value="D:\Application\Apache\apache-maven-3.6.0-bin\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="496" />
+    <option name="width" value="936" />
+    <option name="height" value="1932" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="judo-platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="judo-platform" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JudoMonitorApplication">
+    <configuration name="JudoAdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-admin-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.admin.JudoAdminServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.auth.JudoAuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.config.JudoConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoDaemonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-daemon-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.daemon.JudoDaemonServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.eureka.JudoEurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoFastdfsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-fastdfs-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.fastdfs.JudoFastdfsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.gateway.JudoGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoGeneratorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-generator-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.generator.JudoGeneratorServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoMessageCenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-mc-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.mc.JudoMessageCenterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoMonitorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-monitor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.monitor.JudoMonitorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoSsoClientDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-sso-client-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.ssoc.JudoSsoClientDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoZipkinDbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-zipkin-db" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.zipkin.JudoZipkinDbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JudoZipkinElkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="judo-zipkin-elk" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.judo.zipkin.JudoZipkinElkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.JudoMonitorApplication" />
+      <item itemvalue="Spring Boot.JudoMessageCenterApplication" />
+      <item itemvalue="Spring Boot.JudoZipkinElkApplication" />
+      <item itemvalue="Spring Boot.JudoGatewayApplication" />
+      <item itemvalue="Spring Boot.JudoAuthApplication" />
+      <item itemvalue="Spring Boot.JudoConfigApplication" />
+      <item itemvalue="Spring Boot.JudoSsoClientDemoApplication" />
+      <item itemvalue="Spring Boot.JudoFastdfsServiceApplication" />
+      <item itemvalue="Spring Boot.JudoZipkinDbApplication" />
+      <item itemvalue="Spring Boot.JudoEurekaApplication" />
+      <item itemvalue="Spring Boot.JudoDaemonServiceApplication" />
+      <item itemvalue="Spring Boot.JudoGeneratorServiceApplication" />
+      <item itemvalue="Spring Boot.JudoAdminServiceApplication" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="952a8629-7bea-4dea-91f8-457f82200064" name="Default Changelist" comment="" />
+      <created>1543050207874</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543050207874</updated>
+      <workItem from="1543050217014" duration="280000" />
+      <workItem from="1543415287320" duration="145000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="425000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25292096" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="5" visible="true" weight="0.3298969" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
